@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: "discovery-service"
+  config:
+    import: "configserver:"
+  cloud:
+    config:
+      uri: ${CONFIG_URI:http://localhost:8888}
+server:
+  port: ${SERVER_PORT:8761}

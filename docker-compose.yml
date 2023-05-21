@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  postgres-core:
+    image: postgres
+    restart: on-failure
+    environment:
+      - POSTGRES_USER=levani
+      - POSTGRES_PASSWORD=Aa12345.
+      - POSTGRES_DB=core
+    ports:
+      - "5432:5432"
+  postgres-keycloak:
+    image: postgres
+    restart: on-failure
+    environment:
+      - POSTGRES_USER=levani
+      - POSTGRES_PASSWORD=Aa12345.
+      - POSTGRES_DB=keycloak
+    ports:
+      - "5433:5432"
+  keycloak:
+    depends_on:
+      - postgres-keycloak
+    image: bitnami/keycloak
+    restart: on-failure
+    environment:
+      - KEYCLOAK_ADMIN_USER=levani
+      - KEYCLOAK_ADMIN_PASSWORD=Aa12345.
+      - KEYCLOAK_DATABASE_HOST=postgres-keycloak
+      - KEYCLOAK_DATABASE_PORT=5432
+      - KEYCLOAK_DATABASE_NAME=keycloak
+      - KEYCLOAK_DATABASE_USER=levani
+      - KEYCLOAK_DATABASE_PASSWORD=Aa12345.
+    ports:
+      - "7777:8080"
+      - "7778:8443"

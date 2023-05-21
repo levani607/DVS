@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          searchPaths: '{application}'
+          uri: "https://github.com/levani607/DVS-Configs.git"
+
+
+  application:
+    name: "dvs-config-server"
+server:
+  port: ${SERVER_PORT:8888}

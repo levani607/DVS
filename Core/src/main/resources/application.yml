@@ -1,0 +1,48 @@
+KEYCLOAK_HOST: http://192.168.100.3:7777
+REALM: Users
+CLIENT_ID: dvs-main
+CLIENT_SECRET: bubfBXabmXZZD0dxwyRyQyrdcXYcsNpS
+ADMIN_CLIENT_ID: manager
+ADMIN_SECRET: r8M7XPH5WZ5rzG8VpZIsRf5kMQOqPRTP
+TOKEN_ENDPOINT: http://192.168.100.3:7777/realms/users/protocol/openid-connect/token
+REFRESH_TOKEN_URI: http://192.168.100.3:7777/realms/users/protocol/openid-connect/certs
+POOL_SIZE: 10
+
+myapp:
+  topics:
+    groupId: group1
+    userTopic: keycloak
+    doc-response:
+      create: drcreate
+    doc-request:
+      create: dcreate
+      update: dupdate
+  image:
+    scale: 0.7
+  bootstrap-servers: '192.168.100.3:9094'
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.100.3:5432/core
+    username: levani
+    password: Aa12345.
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://192.168.100.3:7777/realms/users/protocol/openid-connect/certs
+  application:
+    name: core
+minio:
+  storage:
+    bucket: mybucket
+  host:
+    access-key: rOm6SZusqHtVyOhl
+    secret-key: gbF0Hl4BgxxJQr99tXfw1ANmeWvFnPe1
+    url: http://192.168.100.3
+    port: 9000
