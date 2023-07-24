@@ -11,9 +11,9 @@
 4||10|c|G
 4||10|C|G
 4||10|T|G</Grants>
-      <IntrospectionStateNumber>758</IntrospectionStateNumber>
+      <IntrospectionStateNumber>789</IntrospectionStateNumber>
       <ServerVersion>15.0</ServerVersion>
-      <StartupTime>1681058406</StartupTime>
+      <StartupTime>1690149439</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -55,14 +55,14 @@ false Africa/Blantyre
 false Africa/Brazzaville
 false Africa/Bujumbura
 false Africa/Cairo
-true Africa/Casablanca
+false Africa/Casablanca
 true Africa/Ceuta
 false Africa/Conakry
 false Africa/Dakar
 false Africa/Dar_es_Salaam
 false Africa/Djibouti
 false Africa/Douala
-true Africa/El_Aaiun
+false Africa/El_Aaiun
 false Africa/Freetown
 false Africa/Gaborone
 false Africa/Harare
@@ -808,14 +808,14 @@ false posix/Africa/Blantyre
 false posix/Africa/Brazzaville
 false posix/Africa/Bujumbura
 false posix/Africa/Cairo
-true posix/Africa/Casablanca
+false posix/Africa/Casablanca
 true posix/Africa/Ceuta
 false posix/Africa/Conakry
 false posix/Africa/Dakar
 false posix/Africa/Dar_es_Salaam
 false posix/Africa/Djibouti
 false posix/Africa/Douala
-true posix/Africa/El_Aaiun
+false posix/Africa/El_Aaiun
 false posix/Africa/Freetown
 false posix/Africa/Gaborone
 false posix/Africa/Harare
@@ -1404,7 +1404,7 @@ true posixrules
 13391||10|C|G
 13391||-9223372036854775808|U|G
 13391||10|U|G</Grants>
-      <IntrospectionStateNumber>759</IntrospectionStateNumber>
+      <IntrospectionStateNumber>790</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <Relations>sequence|table|16389|16390|1
 sequence|table|16398|16399|1
@@ -1413,6 +1413,7 @@ sequence|table|16407|16408|1
 sequence|table|16416|16417|1
 sequence|table|16423|16424|1
 sequence|table|16432|16433|1
+sequence|table|16514|16515|1
 </Relations>
       <OwnerName>levani</OwnerName>
     </database>
@@ -1428,7 +1429,7 @@ sequence|table|16432|16433|1
 13186||10|C|G
 13186||-9223372036854775808|U|G
 13186||10|U|G</Grants>
-      <IntrospectionStateNumber>758</IntrospectionStateNumber>
+      <IntrospectionStateNumber>789</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>levani</OwnerName>
     </database>
@@ -4837,7 +4838,7 @@ sequence|table|16432|16433|1
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>759</IntrospectionStateNumber>
+      <IntrospectionStateNumber>790</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -8193,91 +8194,155 @@ sequence|table|16432|16433|1
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="507" parent="262" name="comment_id_seq">
+    <sequence id="507" parent="262" name="account_deactivation_id_seq">
+      <DataType>bigint|0s</DataType>
+      <ObjectId>16514</ObjectId>
+      <StateNumber>762</StateNumber>
+      <OwnerName>levani</OwnerName>
+    </sequence>
+    <sequence id="508" parent="262" name="comment_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16498</ObjectId>
       <StateNumber>755</StateNumber>
       <OwnerName>levani</OwnerName>
     </sequence>
-    <sequence id="508" parent="262" name="core_user_id_seq">
+    <sequence id="509" parent="262" name="core_user_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16389</ObjectId>
       <StateNumber>736</StateNumber>
       <OwnerName>levani</OwnerName>
     </sequence>
-    <sequence id="509" parent="262" name="document_id_seq">
+    <sequence id="510" parent="262" name="document_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16398</ObjectId>
       <StateNumber>737</StateNumber>
       <OwnerName>levani</OwnerName>
     </sequence>
-    <sequence id="510" parent="262" name="document_sharing_contract_id_seq">
+    <sequence id="511" parent="262" name="document_sharing_contract_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16407</ObjectId>
       <StateNumber>738</StateNumber>
       <OwnerName>levani</OwnerName>
     </sequence>
-    <sequence id="511" parent="262" name="document_version_id_seq">
+    <sequence id="512" parent="262" name="document_version_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16416</ObjectId>
       <StateNumber>739</StateNumber>
       <OwnerName>levani</OwnerName>
     </sequence>
-    <sequence id="512" parent="262" name="folder_id_seq">
+    <sequence id="513" parent="262" name="folder_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16423</ObjectId>
       <StateNumber>740</StateNumber>
       <OwnerName>levani</OwnerName>
     </sequence>
-    <sequence id="513" parent="262" name="folder_sharing_contract_id_seq">
+    <sequence id="514" parent="262" name="folder_sharing_contract_id_seq">
       <DataType>bigint|0s</DataType>
       <ObjectId>16432</ObjectId>
       <StateNumber>741</StateNumber>
       <OwnerName>levani</OwnerName>
     </sequence>
-    <table id="514" parent="262" name="comment">
+    <table id="515" parent="262" name="account_deactivation">
+      <ObjectId>16515</ObjectId>
+      <StateNumber>763</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>levani</OwnerName>
+    </table>
+    <table id="516" parent="262" name="comment">
       <ObjectId>16499</ObjectId>
       <StateNumber>757</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>levani</OwnerName>
     </table>
-    <table id="515" parent="262" name="core_user">
+    <table id="517" parent="262" name="core_user">
       <ObjectId>16390</ObjectId>
       <StateNumber>745</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>levani</OwnerName>
     </table>
-    <table id="516" parent="262" name="document">
+    <table id="518" parent="262" name="document">
       <ObjectId>16399</ObjectId>
       <StateNumber>744</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>levani</OwnerName>
     </table>
-    <table id="517" parent="262" name="document_sharing_contract">
+    <table id="519" parent="262" name="document_sharing_contract">
       <ObjectId>16408</ObjectId>
       <StateNumber>746</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>levani</OwnerName>
     </table>
-    <table id="518" parent="262" name="document_version">
+    <table id="520" parent="262" name="document_version">
       <ObjectId>16417</ObjectId>
       <StateNumber>756</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>levani</OwnerName>
     </table>
-    <table id="519" parent="262" name="folder">
+    <table id="521" parent="262" name="folder">
       <ObjectId>16424</ObjectId>
       <StateNumber>744</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>levani</OwnerName>
     </table>
-    <table id="520" parent="262" name="folder_sharing_contract">
+    <table id="522" parent="262" name="folder_sharing_contract">
       <ObjectId>16433</ObjectId>
       <StateNumber>752</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>levani</OwnerName>
     </table>
-    <column id="521" parent="514" name="id">
+    <column id="523" parent="515" name="id">
+      <DataType>bigint|0s</DataType>
+      <DefaultExpression>nextval(&apos;account_deactivation_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>762</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="524" parent="515" name="action_taken">
+      <DataType>date|0s</DataType>
+      <Position>2</Position>
+      <StateNumber>762</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="525" parent="515" name="status">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+      <StateNumber>762</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="526" parent="515" name="user_id">
+      <DataType>bigint|0s</DataType>
+      <Position>4</Position>
+      <StateNumber>762</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="527" parent="515" name="fkks9yd59nmie0o3khjr7sosd0y">
+      <ColNames>user_id</ColNames>
+      <ObjectId>16521</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>763</StateNumber>
+      <RefTableId>16390</RefTableId>
+      <RefTableName>core_user</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="528" parent="515" name="account_deactivation_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16519</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>762</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="529" parent="515" name="account_deactivation_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16520</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>762</StateNumber>
+      <UnderlyingIndexId>16519</UnderlyingIndexId>
+    </key>
+    <column id="530" parent="516" name="id">
       <DataType>bigint|0s</DataType>
       <DefaultExpression>nextval(&apos;comment_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -8285,37 +8350,47 @@ sequence|table|16432|16433|1
       <StateNumber>755</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="522" parent="514" name="detail_id">
+    <column id="531" parent="516" name="detail_id">
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
       <StateNumber>755</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="523" parent="514" name="line_number">
+    <column id="532" parent="516" name="line_number">
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
       <StateNumber>755</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="524" parent="514" name="status">
+    <column id="533" parent="516" name="status">
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
       <StateNumber>755</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="525" parent="514" name="text">
+    <column id="534" parent="516" name="text">
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
       <StateNumber>755</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="526" parent="514" name="user_id">
+    <column id="535" parent="516" name="user_id">
       <DataType>bigint|0s</DataType>
       <Position>6</Position>
       <StateNumber>755</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="527" parent="514" name="fkmjmt0ulbmmj9w69dk814c8mb4">
+    <foreign-key id="536" parent="516" name="comment_document_version_id_fk">
+      <ColNames>detail_id</ColNames>
+      <ObjectId>16531</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>773</StateNumber>
+      <RefTableId>16417</RefTableId>
+      <RefTableName>document_version</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <foreign-key id="537" parent="516" name="fkmjmt0ulbmmj9w69dk814c8mb4">
       <ColNames>user_id</ColNames>
       <ObjectId>16509</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8325,7 +8400,7 @@ sequence|table|16432|16433|1
       <RefTableName>core_user</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="528" parent="514" name="comment_pkey">
+    <index id="538" parent="516" name="comment_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16505</ObjectId>
@@ -8334,14 +8409,14 @@ sequence|table|16432|16433|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="529" parent="514" name="comment_pkey">
+    <key id="539" parent="516" name="comment_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16506</ObjectId>
       <Primary>1</Primary>
       <StateNumber>755</StateNumber>
       <UnderlyingIndexId>16505</UnderlyingIndexId>
     </key>
-    <column id="530" parent="515" name="id">
+    <column id="540" parent="517" name="id">
       <DataType>bigint|0s</DataType>
       <DefaultExpression>nextval(&apos;core_user_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -8349,43 +8424,43 @@ sequence|table|16432|16433|1
       <StateNumber>736</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="531" parent="515" name="email">
+    <column id="541" parent="517" name="email">
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="532" parent="515" name="firstname">
+    <column id="542" parent="517" name="firstname">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="533" parent="515" name="keycloak_id">
+    <column id="543" parent="517" name="keycloak_id">
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="534" parent="515" name="lastname">
+    <column id="544" parent="517" name="lastname">
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="535" parent="515" name="picture_url">
+    <column id="545" parent="517" name="picture_url">
       <DataType>varchar(255)|0s</DataType>
       <Position>6</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="536" parent="515" name="status">
+    <column id="546" parent="517" name="status">
       <DataType>varchar(255)|0s</DataType>
       <Position>7</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="537" parent="515" name="core_user_pkey">
+    <index id="547" parent="517" name="core_user_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16396</ObjectId>
@@ -8394,7 +8469,7 @@ sequence|table|16432|16433|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="538" parent="515" name="uk_hgbun098gp1ypqjfgo0llmwli">
+    <index id="548" parent="517" name="uk_hgbun098gp1ypqjfgo0llmwli">
       <ColNames>keycloak_id</ColNames>
       <ObjectId>16441</ObjectId>
       <StateNumber>743</StateNumber>
@@ -8404,19 +8479,19 @@ sequence|table|16432|16433|1
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="539" parent="515" name="core_user_pkey">
+    <key id="549" parent="517" name="core_user_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16397</ObjectId>
       <Primary>1</Primary>
       <StateNumber>736</StateNumber>
       <UnderlyingIndexId>16396</UnderlyingIndexId>
     </key>
-    <key id="540" parent="515" name="uk_hgbun098gp1ypqjfgo0llmwli">
+    <key id="550" parent="517" name="uk_hgbun098gp1ypqjfgo0llmwli">
       <ObjectId>16442</ObjectId>
       <StateNumber>743</StateNumber>
       <UnderlyingIndexId>16441</UnderlyingIndexId>
     </key>
-    <column id="541" parent="516" name="id">
+    <column id="551" parent="518" name="id">
       <DataType>bigint|0s</DataType>
       <DefaultExpression>nextval(&apos;document_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -8424,38 +8499,38 @@ sequence|table|16432|16433|1
       <StateNumber>737</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="542" parent="516" name="latest_version">
+    <column id="552" parent="518" name="latest_version">
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
       <StateNumber>737</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="543" parent="516" name="name">
+    <column id="553" parent="518" name="name">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
       <StateNumber>737</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="544" parent="516" name="status">
+    <column id="554" parent="518" name="status">
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
       <StateNumber>737</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="545" parent="516" name="folder">
+    <column id="555" parent="518" name="folder">
       <DataType>bigint|0s</DataType>
       <Position>5</Position>
       <StateNumber>737</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="546" parent="516" name="user_id">
+    <column id="556" parent="518" name="user_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>737</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="547" parent="516" name="fkhji3uk9w6vge3rj4fexj6n17i">
+    <foreign-key id="557" parent="518" name="fkhji3uk9w6vge3rj4fexj6n17i">
       <ColNames>folder</ColNames>
       <ObjectId>16443</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8465,7 +8540,7 @@ sequence|table|16432|16433|1
       <RefTableName>folder</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="548" parent="516" name="fkjpb2u7p8wqml41jhv05fwi7pn">
+    <foreign-key id="558" parent="518" name="fkjpb2u7p8wqml41jhv05fwi7pn">
       <ColNames>user_id</ColNames>
       <ObjectId>16448</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8475,7 +8550,7 @@ sequence|table|16432|16433|1
       <RefTableName>core_user</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="549" parent="516" name="document_pkey">
+    <index id="559" parent="518" name="document_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16405</ObjectId>
@@ -8484,14 +8559,14 @@ sequence|table|16432|16433|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="550" parent="516" name="document_pkey">
+    <key id="560" parent="518" name="document_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16406</ObjectId>
       <Primary>1</Primary>
       <StateNumber>737</StateNumber>
       <UnderlyingIndexId>16405</UnderlyingIndexId>
     </key>
-    <column id="551" parent="517" name="id">
+    <column id="561" parent="519" name="id">
       <DataType>bigint|0s</DataType>
       <DefaultExpression>nextval(&apos;document_sharing_contract_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -8499,37 +8574,37 @@ sequence|table|16432|16433|1
       <StateNumber>738</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="552" parent="517" name="status">
+    <column id="562" parent="519" name="status">
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
       <StateNumber>738</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="553" parent="517" name="type">
+    <column id="563" parent="519" name="type">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
       <StateNumber>738</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="554" parent="517" name="document_id">
+    <column id="564" parent="519" name="document_id">
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
       <StateNumber>738</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="555" parent="517" name="owner_id">
+    <column id="565" parent="519" name="owner_id">
       <DataType>bigint|0s</DataType>
       <Position>5</Position>
       <StateNumber>738</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="556" parent="517" name="recipient_id">
+    <column id="566" parent="519" name="recipient_id">
       <DataType>bigint|0s</DataType>
       <Position>6</Position>
       <StateNumber>738</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="557" parent="517" name="fk3ugj1jphfqvxlhoniq1t1t732">
+    <foreign-key id="567" parent="519" name="fk3ugj1jphfqvxlhoniq1t1t732">
       <ColNames>document_id</ColNames>
       <ObjectId>16453</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8539,7 +8614,7 @@ sequence|table|16432|16433|1
       <RefTableName>document</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="558" parent="517" name="fk7t16r6bxn0oca5594le0k2yii">
+    <foreign-key id="568" parent="519" name="fk7t16r6bxn0oca5594le0k2yii">
       <ColNames>owner_id</ColNames>
       <ObjectId>16458</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8549,7 +8624,7 @@ sequence|table|16432|16433|1
       <RefTableName>core_user</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="559" parent="517" name="fkfee8sgsr7h5amtqv9emvjwij1">
+    <foreign-key id="569" parent="519" name="fkfee8sgsr7h5amtqv9emvjwij1">
       <ColNames>recipient_id</ColNames>
       <ObjectId>16463</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8559,7 +8634,7 @@ sequence|table|16432|16433|1
       <RefTableName>core_user</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="560" parent="517" name="document_sharing_contract_pkey">
+    <index id="570" parent="519" name="document_sharing_contract_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16414</ObjectId>
@@ -8568,14 +8643,14 @@ sequence|table|16432|16433|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="561" parent="517" name="document_sharing_contract_pkey">
+    <key id="571" parent="519" name="document_sharing_contract_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16415</ObjectId>
       <Primary>1</Primary>
       <StateNumber>738</StateNumber>
       <UnderlyingIndexId>16414</UnderlyingIndexId>
     </key>
-    <column id="562" parent="518" name="id">
+    <column id="572" parent="520" name="id">
       <DataType>bigint|0s</DataType>
       <DefaultExpression>nextval(&apos;document_version_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -8583,31 +8658,31 @@ sequence|table|16432|16433|1
       <StateNumber>739</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="563" parent="518" name="status">
+    <column id="573" parent="520" name="status">
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
       <StateNumber>739</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="564" parent="518" name="version_id">
+    <column id="574" parent="520" name="version_id">
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
       <StateNumber>739</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="565" parent="518" name="document_id">
+    <column id="575" parent="520" name="document_id">
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
       <StateNumber>739</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="566" parent="518" name="elastic_id">
+    <column id="576" parent="520" name="elastic_id">
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
       <StateNumber>756</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="567" parent="518" name="fknvpdtplqabenasvgs0q5e3db4">
+    <foreign-key id="577" parent="520" name="fknvpdtplqabenasvgs0q5e3db4">
       <ColNames>document_id</ColNames>
       <ObjectId>16468</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8617,7 +8692,7 @@ sequence|table|16432|16433|1
       <RefTableName>document</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="568" parent="518" name="document_version_pkey">
+    <index id="578" parent="520" name="document_version_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16421</ObjectId>
@@ -8626,14 +8701,14 @@ sequence|table|16432|16433|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="569" parent="518" name="document_version_pkey">
+    <key id="579" parent="520" name="document_version_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16422</ObjectId>
       <Primary>1</Primary>
       <StateNumber>739</StateNumber>
       <UnderlyingIndexId>16421</UnderlyingIndexId>
     </key>
-    <column id="570" parent="519" name="id">
+    <column id="580" parent="521" name="id">
       <DataType>bigint|0s</DataType>
       <DefaultExpression>nextval(&apos;folder_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -8641,32 +8716,32 @@ sequence|table|16432|16433|1
       <StateNumber>740</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="571" parent="519" name="name">
+    <column id="581" parent="521" name="name">
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
       <StateNumber>740</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="572" parent="519" name="status">
+    <column id="582" parent="521" name="status">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
       <StateNumber>740</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="573" parent="519" name="parent_folder_id">
+    <column id="583" parent="521" name="parent_folder_id">
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
       <StateNumber>740</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="574" parent="519" name="user_id">
+    <column id="584" parent="521" name="user_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>740</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="575" parent="519" name="fk57g7veis1gp5wn3g0mp0x57pl">
+    <foreign-key id="585" parent="521" name="fk57g7veis1gp5wn3g0mp0x57pl">
       <ColNames>parent_folder_id</ColNames>
       <ObjectId>16473</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8676,7 +8751,7 @@ sequence|table|16432|16433|1
       <RefTableName>folder</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="576" parent="519" name="fki91yeie3xflupv609g5oj0rgq">
+    <foreign-key id="586" parent="521" name="fki91yeie3xflupv609g5oj0rgq">
       <ColNames>user_id</ColNames>
       <ObjectId>16478</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8686,7 +8761,7 @@ sequence|table|16432|16433|1
       <RefTableName>core_user</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="577" parent="519" name="folder_pkey">
+    <index id="587" parent="521" name="folder_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16430</ObjectId>
@@ -8695,14 +8770,14 @@ sequence|table|16432|16433|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="578" parent="519" name="folder_pkey">
+    <key id="588" parent="521" name="folder_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16431</ObjectId>
       <Primary>1</Primary>
       <StateNumber>740</StateNumber>
       <UnderlyingIndexId>16430</UnderlyingIndexId>
     </key>
-    <column id="579" parent="520" name="id">
+    <column id="589" parent="522" name="id">
       <DataType>bigint|0s</DataType>
       <DefaultExpression>nextval(&apos;folder_sharing_contract_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -8710,37 +8785,37 @@ sequence|table|16432|16433|1
       <StateNumber>741</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="580" parent="520" name="status">
+    <column id="590" parent="522" name="status">
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
       <StateNumber>741</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="581" parent="520" name="type">
+    <column id="591" parent="522" name="type">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
       <StateNumber>741</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="582" parent="520" name="folder_id">
+    <column id="592" parent="522" name="folder_id">
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
       <StateNumber>741</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="583" parent="520" name="owner_id">
+    <column id="593" parent="522" name="owner_id">
       <DataType>bigint|0s</DataType>
       <Position>5</Position>
       <StateNumber>741</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="584" parent="520" name="recipient_id">
+    <column id="594" parent="522" name="recipient_id">
       <DataType>bigint|0s</DataType>
       <Position>6</Position>
       <StateNumber>741</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="585" parent="520" name="fkkre2oepn1c132dktx4tacu7ft">
+    <foreign-key id="595" parent="522" name="fkkre2oepn1c132dktx4tacu7ft">
       <ColNames>folder_id</ColNames>
       <ObjectId>16483</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8750,7 +8825,7 @@ sequence|table|16432|16433|1
       <RefTableName>folder</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="586" parent="520" name="fk1fp1uqj6d8gsdu9h9kgwrnd39">
+    <foreign-key id="596" parent="522" name="fk1fp1uqj6d8gsdu9h9kgwrnd39">
       <ColNames>owner_id</ColNames>
       <ObjectId>16488</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8760,7 +8835,7 @@ sequence|table|16432|16433|1
       <RefTableName>core_user</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="587" parent="520" name="fkd0lkyy3kh0vqpht6tdk1txoj6">
+    <foreign-key id="597" parent="522" name="fkd0lkyy3kh0vqpht6tdk1txoj6">
       <ColNames>recipient_id</ColNames>
       <ObjectId>16493</ObjectId>
       <RefColNames>id</RefColNames>
@@ -8770,7 +8845,7 @@ sequence|table|16432|16433|1
       <RefTableName>core_user</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="588" parent="520" name="folder_sharing_contract_pkey">
+    <index id="598" parent="522" name="folder_sharing_contract_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16439</ObjectId>
@@ -8779,7 +8854,7 @@ sequence|table|16432|16433|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="589" parent="520" name="folder_sharing_contract_pkey">
+    <key id="599" parent="522" name="folder_sharing_contract_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16440</ObjectId>
       <Primary>1</Primary>

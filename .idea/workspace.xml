@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="491121ed-5309-4ed0-ba67-83487fc1d917" name="Changes" comment="finish view functionality">
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/com/example/core/configs/CorsWebConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/com/example/core/model/enums/ItemType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/com/example/core/model/response/ItemShortResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/601ceefd-b9fc-470d-b782-035e5db11d18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/601ceefd-b9fc-470d-b782-035e5db11d18.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/601ceefd-b9fc-470d-b782-035e5db11d18/storage_v2/_src_/database/core.n68uAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/601ceefd-b9fc-470d-b782-035e5db11d18/storage_v2/_src_/database/core.n68uAA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/com/example/core/configs/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/com/example/core/configs/AuthConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/com/example/core/controller/FolderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/com/example/core/controller/FolderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/com/example/core/facade/FolderFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/com/example/core/facade/FolderFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/com/example/core/repository/DocumentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/com/example/core/repository/DocumentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/com/example/core/repository/FolderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/com/example/core/repository/FolderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/com/example/core/service/DocumentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/com/example/core/service/DocumentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/com/example/core/service/FolderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/com/example/core/service/FolderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +61,12 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17 (2)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/levan/Desktop/Qvizi1&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;show.run.dashboard.notification&quot;: &quot;false&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;b51beddf529ec0b5ff85f498cf00dbd2&quot;
   },
@@ -183,6 +197,15 @@
       <workItem from="1681058270294" duration="15947000" />
       <workItem from="1681736284160" duration="6612000" />
       <workItem from="1684699209280" duration="612000" />
+      <workItem from="1688228268685" duration="2093000" />
+      <workItem from="1688841804632" duration="4125000" />
+      <workItem from="1688886715186" duration="7860000" />
+      <workItem from="1689441772721" duration="1265000" />
+      <workItem from="1689510024349" duration="3271000" />
+      <workItem from="1689700473137" duration="600000" />
+      <workItem from="1689794697056" duration="1878000" />
+      <workItem from="1689874141932" duration="6303000" />
+      <workItem from="1690147154533" duration="7249000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1679753987514</created>
@@ -275,6 +298,26 @@
           <url>file://$PROJECT_DIR$/Core/src/main/java/com/example/core/service/MinioService.java</url>
           <line>57</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Core/src/main/java/com/example/core/facade/FolderFacade.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Core/src/main/java/com/example/core/facade/FolderFacade.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Core/src/main/java/com/example/core/facade/FolderFacade.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Core/src/main/java/com/example/core/facade/FolderFacade.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

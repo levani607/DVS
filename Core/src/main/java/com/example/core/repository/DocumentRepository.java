@@ -3,6 +3,7 @@ package com.example.core.repository;
 import com.example.core.model.entity.Document;
 import com.example.core.model.enums.DocumentStatus;
 import com.example.core.model.response.DocumentShortResponse;
+import com.example.core.model.response.ItemShortResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -43,13 +44,13 @@ public interface DocumentRepository extends JpaRepository<Document, Long> {
                                              @Param("documentStatus") String documentStatus);
 
     @Query("""
-            select new com.example.core.model.response.DocumentShortResponse(d) from Document d
+            select new com.example.core.model.response.ItemShortResponse(d) from Document d
             where d.folder.id=:folderId
             and d.status in (:statuses)
             """)
-    Page<DocumentShortResponse> findDocumentsInFolder(@Param("folderId") Long folderId,
-                                                      @Param("statuses") List<DocumentStatus> statuses,
-                                                          Pageable pageable);
+    Page<ItemShortResponse> findDocumentsInFolder(@Param("folderId") Long folderId,
+                                                  @Param("statuses") List<DocumentStatus> statuses,
+                                                  Pageable pageable);
 
     @Query("""
             select d

@@ -11,6 +11,7 @@ import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.KeycloakBuilder;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration;
 import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -49,6 +50,8 @@ public class AuthConfig {
         jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(new KeycloakRoleConverter());
 
         http.csrf().disable()
+                .cors()
+                .disable()
                 .authorizeRequests()
                 .antMatchers(
                         "/client/auth/login",
@@ -65,6 +68,8 @@ public class AuthConfig {
                         "/actuator/**",
                         "/swagger-ui.html/**"
                 ).permitAll()
+                .antMatchers(HttpMethod.OPTIONS,"/**")
+                .permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .oauth2ResourceServer()

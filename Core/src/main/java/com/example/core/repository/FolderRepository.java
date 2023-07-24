@@ -7,6 +7,7 @@ import com.example.core.model.enums.FolderStatus;
 import com.example.core.model.enums.SharingStatus;
 import com.example.core.model.response.DocumentShortResponse;
 import com.example.core.model.response.FolderShortResponse;
+import com.example.core.model.response.ItemShortResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -43,31 +44,31 @@ public interface FolderRepository extends JpaRepository<Folder, Long> {
                                          @Param("status") String status);
 
     @Query("""
-            select new com.example.core.model.response.FolderShortResponse(f) from Folder f
+            select new com.example.core.model.response.ItemShortResponse(f) from Folder f
             where f.parentFolder.id=:folderId
             and f.status in (:statuses)
             """)
-    Page<FolderShortResponse> findFoldersInFolder(@Param("folderId") Long folderId,
-                                                  @Param("statuses") List<FolderStatus> statuses,
-                                                  Pageable pageable);
+    Page<ItemShortResponse> findFoldersInFolder(@Param("folderId") Long folderId,
+                                                @Param("statuses") List<FolderStatus> statuses,
+                                                Pageable pageable);
 
     @Query("""
-            select new com.example.core.model.response.FolderShortResponse(f) from Folder f
+            select new com.example.core.model.response.ItemShortResponse(f) from Folder f
             where f.parentFolder.id is null
             and f.user.id = :userId
             and f.status in (:statuses)
             """)
-    List<FolderShortResponse> findMasterFolders(@Param("userId") Long userId,
+    List<ItemShortResponse> findMasterFolders(@Param("userId") Long userId,
                                                 @Param("statuses") List<FolderStatus> statuses);
 
     @Query("""
-            select new com.example.core.model.response.FolderShortResponse(f) from Folder f
+            select new com.example.core.model.response.ItemShortResponse(f) from Folder f
             join FolderSharingContract fsc on f.id = fsc.id
             where fsc.recipientUser.id = :userId
             and fsc.status in (:shareStatus)
             and f.status in (:statuses)
             """)
-    List<FolderShortResponse> findsFoldersSharedToUser(@Param("userId") Long userId,
+    List<ItemShortResponse> findsFoldersSharedToUser(@Param("userId") Long userId,
                                                        @Param("shareStatus") List<SharingStatus> sharingStatuses,
                                                        @Param("statuses") List<FolderStatus> statuses);
 

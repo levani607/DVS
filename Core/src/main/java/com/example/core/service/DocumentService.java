@@ -6,6 +6,7 @@ import com.example.core.model.entity.Document;
 import com.example.core.model.enums.DocumentStatus;
 import com.example.core.model.enums.FolderStatus;
 import com.example.core.model.response.DocumentShortResponse;
+import com.example.core.model.response.ItemShortResponse;
 import com.example.core.repository.DocumentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -36,7 +37,7 @@ public class DocumentService {
         return repository.findEveryDocumentInFolder(id, FolderStatus.ACTIVE.toString(),DocumentStatus.ACTIVE.toString());
     }
 
-    public Page<DocumentShortResponse> findDocumentsInFolder(Long id, Pageable pageable){
+    public Page<ItemShortResponse> findDocumentsInFolder(Long id, Pageable pageable){
         return repository.findDocumentsInFolder(id,List.of(DocumentStatus.ACTIVE,DocumentStatus.ACTIVE),pageable);
     }
 

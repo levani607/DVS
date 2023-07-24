@@ -6,6 +6,7 @@ import com.example.core.model.entity.Folder;
 import com.example.core.model.enums.FolderStatus;
 import com.example.core.model.enums.SharingStatus;
 import com.example.core.model.response.FolderShortResponse;
+import com.example.core.model.response.ItemShortResponse;
 import com.example.core.repository.FolderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -35,15 +36,15 @@ public class FolderService {
     public List<Folder> findFoldersInsideFolder(Long id) {
         return folderRepository.findFoldersInsideFolder(id, FolderStatus.ACTIVE.toString());
     }
-    public Page<FolderShortResponse> findFoldersInFolder(Long id,Pageable pageable){
+    public Page<ItemShortResponse> findFoldersInFolder(Long id, Pageable pageable){
         return folderRepository.findFoldersInFolder(id,List.of(FolderStatus.ACTIVE),pageable);
     }
 
-    public List<FolderShortResponse> findMasterFoldersForUser(Long userId){
+    public List<ItemShortResponse> findMasterFoldersForUser(Long userId){
         return folderRepository.findMasterFolders(userId,List.of(FolderStatus.ACTIVE));
     }
 
-    public List<FolderShortResponse> findFoldersSharedToUser(Long userId) {
+    public List<ItemShortResponse> findFoldersSharedToUser(Long userId) {
         return folderRepository.findsFoldersSharedToUser(userId, List.of(SharingStatus.ACTIVE),List.of(FolderStatus.ACTIVE));
     }
 
